@@ -29,12 +29,20 @@ h4 {
   font-weight: 300;
 }
 
-img {
+img.square-image {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 @media (min-width: 960px) {
   .header {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  img.square-image {
+    width: 300px; /* You can adjust this width as needed to make it square */
+    height: 300px;
+    object-fit: cover; /* This property ensures the image fills the square without distortion */
   }
 }
